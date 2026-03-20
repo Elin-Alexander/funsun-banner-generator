@@ -1,0 +1,11 @@
+{
+  "bg_color": "#8bf4df",
+  "text_color": "#3f3c46",
+  "title": "От зимнего моря к летнему",
+  "subtitle": "«Все включено»",
+  "image_url": "http://localhost:3000/src/img/01.jpg",
+  "show_logo": "false",
+  "badge_text": "ТУРЫ В ЕГИПЕТ И ТУРЦИЮ",
+  "badge_color": "#00bda9",
+  "badge_text_color": "#b4f1ea"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "funsun-banner-generator",
+  "version": "1.0.0",
+  "description": "Генератор баннеров Fun&Sun с параметризацией через URL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node run_test.js",
+    "generate": "node generate-banner.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "puppeteer": "^24.15.0"
+  },
+  "author": "Fun&Sun Team",
+  "license": "MIT"
+}
