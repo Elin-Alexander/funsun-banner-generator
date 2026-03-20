@@ -11,6 +11,7 @@ app.use(express.json());
 // Статика
 app.use(express.static(path.join(__dirname)));
 app.use('/src/img', express.static(path.join(__dirname, 'src', 'img')));
+app.use('/src/fonts', express.static(path.join(__dirname, 'src', 'fonts')));
 app.use('/output', express.static(path.join(__dirname, 'output')));
 app.use('/temporary', express.static(path.join(__dirname, 'temporary')));
 
