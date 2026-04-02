@@ -22,11 +22,11 @@ async function generateBanner(bannerUrl, outputPath) {
   try {
     const page = await browser.newPage();
     
-    // НОВЫЙ РАЗМЕР: 1160×712 (2x для Retina = 2320×1424)
+    // 📍 НОВЫЙ РАЗМЕР: 1160×712 (2x для Retina = 2320×1424)
     await page.setViewport({ 
       width: 1160, 
       height: 712, 
-      deviceScaleFactor: 2 
+      deviceScaleFactor: 1 
     });
     
     // Переходим на страницу с параметрами
