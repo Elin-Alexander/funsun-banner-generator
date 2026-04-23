@@ -6,9 +6,9 @@ const path = require('path');
  * Генерирует скриншот баннера из HTML-шаблона
  * @param {string} bannerUrl - URL с параметрами
  * @param {string} outputPath - Путь для сохранения изображения
+ * @param {string} bannerType - Тип баннера (email/web/mobile)
  */
-async function generateBanner(bannerUrl, outputPath) {
-  // Убеждаемся, что папка существует
+async function generateBanner(bannerUrl, outputPath, bannerType = 'email') {
   const outputDir = path.dirname(outputPath);
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
@@ -22,26 +22,38 @@ async function generateBanner(bannerUrl, outputPath) {
   try {
     const page = await browser.newPage();
     
-    // 📍 НОВЫЙ РАЗМЕР: 1160×712 (2x для Retina = 2320×1424)
+    // 📍 РАЗМЕРЫ VIEWPORT В ЗАВИСИМОСТИ ОТ ТИПА БАННЕРА
+    let viewportWidth, viewportHeight;
+    
+    switch (bannerType) {
+      case 'web':
+        viewportWidth = 720;
+        viewportHeight = 360;
+        break;
+      case 'mobile':
+        viewportWidth = 720;
+        viewportHeight = 360;
+        break;
+      case 'email':
+      default:
+        viewportWidth = 1160;
+        viewportHeight = 712;
+    }
+    
     await page.setViewport({ 
-      width: 1160, 
-      height: 712, 
-      deviceScaleFactor: 1 
+      width: viewportWidth, 
+      height: viewportHeight, 
+      deviceScaleFactor: 2 
     });
     
-    // Переходим на страницу с параметрами
     await page.goto(bannerUrl, { 
       waitUntil: 'networkidle0',
       timeout: 30000 
     });
     
-    // Ждём рендеринга контента
     await page.waitForSelector('.banner', { timeout: 10000 });
-    
-    // Ждём загрузки шрифтов
     await page.evaluateHandle('document.fonts.ready');
     
-    // Скриншот только элемента .banner (не fullPage)
     const bannerElement = await page.$('.banner');
     await bannerElement.screenshot({ 
       path: outputPath, 
@@ -65,9 +77,10 @@ if (require.main === module) {
     'title=Тестовый%20баннер&' +
     'subtitle=Проверка%20работы&' +
     'image_url=https://images.unsplash.com/photo-1576014131341-fe148656e6d4&' +
-    'show_logo=true';
+    'badge_text=ТЕСТ&' +
+    'banner_type=web';
   
-  generateBanner(testUrl, path.join(__dirname, 'output', 'test-banner.png'))
+  generateBanner(testUrl, path.join(__dirname, 'output', 'test-banner.png'), 'web')
     .then(() => console.log('🎉 Тест завершён!'))
     .catch(console.error);
 }

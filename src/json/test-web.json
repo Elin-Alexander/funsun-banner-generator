@@ -1,0 +1,11 @@
+{
+  "bg_color": "#9BCAFF",
+  "text_color": "#3A3D44",
+  "title": "ЗАГОЛОВОК 1 СТРОКА",
+  "subtitle": "Подзаголовок в 1 строку",
+  "image_url": "http://localhost:3000/src/img/05.jpg",
+  "banner_type": "web",
+  "badge_text": "ТЕКСТ ДЛЯ ТЕГА",
+  "badge_color": "#6898F1",
+  "badge_text_color": "#FFFFFF"
+}

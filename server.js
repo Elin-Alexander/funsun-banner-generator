@@ -26,6 +26,7 @@ app.post('/api/generate-banner', async (req, res) => {
       title, 
       image_url, 
       subtitle, 
+      banner_type,
       show_logo,
       badge_text, 
       badge_color, 
@@ -40,12 +41,17 @@ app.post('/api/generate-banner', async (req, res) => {
       });
     }
 
+    // 📍 Тип баннера (по умолчанию email)
+    const validTypes = ['email', 'web', 'mobile'];
+    const bannerType = validTypes.includes(banner_type) ? banner_type : 'email';
+
     // Формируем параметры для URL
     const params = {
       bg_color: bg_color,
       text_color: text_color || '#FFFFFF',
       title: title,
-      image_url: image_url
+      image_url: image_url,
+      banner_type: bannerType
     };
 
     // Опциональные параметры
@@ -62,14 +68,15 @@ app.post('/api/generate-banner', async (req, res) => {
     const bannerUrl = `http://localhost:${PORT}/banner.html?${queryString}`;
 
     console.log('🔗 URL баннера:', bannerUrl);
+    console.log('📐 Тип баннера:', bannerType);
 
     // Генерируем имя файла
     const timestamp = Date.now();
-    const outputFileName = `banner-${timestamp}.png`;
+    const outputFileName = `banner-${bannerType}-${timestamp}.png`;
     const outputPath = path.join(__dirname, 'output', outputFileName);
 
     // Генерируем изображение
-    await generateBanner(bannerUrl, outputPath);
+    await generateBanner(bannerUrl, outputPath, bannerType);
 
     console.log('✅ Баннер сгенерирован:', outputPath);
 
@@ -81,7 +88,8 @@ app.post('/api/generate-banner', async (req, res) => {
         filePath: outputPath,
         imageUrl: `${process.env.BASE_URL || `http://localhost:${PORT}`}/output/${outputFileName}`,
         bannerUrl: bannerUrl,
-        params: params
+        params: params,
+        bannerType: bannerType
       }
     });
 
