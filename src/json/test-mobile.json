@@ -1,8 +1,8 @@
 {
   "bg_color": "#FF8F09",
   "text_color": "#FFFFFF",
-  "title": "Заголовок PUSH max 3 строки",
-  "subtitle": "Подзаголовок max 3 строки",
+  "title": "ПОДЗАГОЛОВОК В 1 СТРОКУ",
+  "subtitle": "Подзаголовок в 1 строку",
   "image_url": "http://localhost:3000/src/img/04.jpg",
   "banner_type": "mobile",
   "badge_text": "MOBILE для тега",

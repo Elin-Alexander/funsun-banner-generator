@@ -31,8 +31,8 @@ async function generateBanner(bannerUrl, outputPath, bannerType = 'email') {
         viewportHeight = 360;
         break;
       case 'mobile':
-        viewportWidth = 720;
-        viewportHeight = 360;
+        viewportWidth = 1000;
+        viewportHeight = 500;
         break;
       case 'email':
       default:

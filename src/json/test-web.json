@@ -1,8 +1,8 @@
 {
   "bg_color": "#9BCAFF",
   "text_color": "#3A3D44",
-  "title": "ЗАГОЛОВОК 1 СТРОКА",
-  "subtitle": "Подзаголовок в 1 строку",
+  "title": "Заголовок PUSH max 3 строки",
+  "subtitle": "Подзаголовок max 3 строки ",
   "image_url": "http://localhost:3000/src/img/05.jpg",
   "banner_type": "web",
   "badge_text": "WEB ДЛЯ ТЕГА",
