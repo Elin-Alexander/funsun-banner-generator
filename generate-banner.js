@@ -43,7 +43,7 @@ async function generateBanner(bannerUrl, outputPath, bannerType = 'email') {
     await page.setViewport({ 
       width: viewportWidth, 
       height: viewportHeight, 
-      deviceScaleFactor: 2 
+      deviceScaleFactor: 1 
     });
     
     await page.goto(bannerUrl, { 
