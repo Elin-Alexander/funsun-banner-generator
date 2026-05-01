@@ -121,6 +121,7 @@
       margin-bottom: 30px;
       color: #FFFFFF;
       font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
+	  text-transform: uppercase;
     }
 
     .banner--email .subtitle {
@@ -219,6 +220,7 @@
       font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
       flex: none;
       order: 0;
+	  text-transform: uppercase;
     }
 
     .banner--web .subtitle {
@@ -236,98 +238,100 @@
     }
 
     /* =============================================
-       MOBILE PUSH (720×360px) - СТИЛИ ИЗ ФИГМЫ --mobile
-       ============================================= */
-    .banner--mobile {
-      width: 1000px;
-      height: 500px;
-      border-radius: 20px;
-      flex-direction: row;
-    }
-
-    /* Изображение на всю высоту */
-    .banner--mobile .banner-right {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    .banner--mobile .banner-right img {
-      width: 100%;
-      /*height: 100%;*/
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    /* Текстовый блок ПОВЕРХ изображения */
-    .banner--mobile .banner-left {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 972px;  /* 720 - 20px (отступы) */
-  /*height: 163px;*/
-  padding: 20px 20px;
-  display: flex;
+   MOBILE PUSH (1000×500px) — ИСПРАВЛЕННЫЙ
+   ============================================= */
+.banner--mobile {
+  width: 1000px; 
+  height: 500px;
+  border-radius: 20px;
   flex-direction: column;
-  z-index: 1;
-  border-radius: 14px;
-  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 
-    /* Плашка (badge) */
-    .banner--mobile .badge {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      padding: 4px 17px;
-      border-radius: 18.6px;
-      font-size: 14px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      display: none;
-      /*height: 25px;*/
-      line-height: 1.4;
-      font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
-      z-index: 2;
-    }
+/* 📍 ТЕКСТОВЫЙ БЛОК СВЕРХУ */
+.banner--mobile .banner-left {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 224px; /* 500 - 276 */
+  padding: 30px 30px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  z-index: 2;
+}
 
-    /* Логотип справа сверху */
-    .banner--mobile .logo {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      display: none;
-      z-index: 2;
-    }
+/* 📍 ФОТО СНИЗУ */
+.banner--mobile .banner-right {
+  position: absolute;
+  width: 940px; 
+  height: 276px;
+  left: 50%; 
+  transform: translateX(-50%);
+  bottom: 30px; /* отступ снизу */
+  z-index: 2;
+}
 
-    .banner--mobile .logo img {
-      width: 100px;
-      height: auto;
-    }
+.banner--mobile .banner-right img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 14px;
+}
 
-    /* Заголовок */
-    .banner--mobile .title {
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-top: 60px;
-      margin-bottom: 6px;
-      color: #FFFFFF;
-      font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
-    }
+/* Логотип Fun&Sun (справа сверху) */
+.banner--mobile .logo {
+  position: absolute; 
+  top: 21px; 
+  right: 23px;
+  display: block; /* всегда показывать для mobile */
+  z-index: 3;
+}
 
-    /* Подзаголовок */
-    .banner--mobile .subtitle {
-      font-size: 20px;
-      line-height: 1.4;
-      color: #FFFFFF;
-      font-weight: 400;
-      font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
-    }
+.banner--mobile .logo img { 
+  width: 100%; 
+  height: auto; 
+}
+
+/* Плашка (слева сверху) */
+.banner--mobile .badge {
+  position: absolute; 
+  top: 30px; 
+  left: 30px;
+  padding: 4px 17px; 
+  border-radius: 18.6px;
+  font-size: 12px; 
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block; /* всегда показывать */
+  width: auto; /* авто ширина */
+  height: 25px;
+  line-height: 1.4; 
+  font-family: 'TT Firs Neue', sans-serif;
+  z-index: 3;
+}
+
+/* Шрифты */
+.banner--mobile .title {
+  font-size: 30px; 
+  font-weight: 700;
+  line-height: 39px; 
+  text-transform: uppercase;
+  color: #FFFFFF; 
+  font-family: 'TT Firs Neue', sans-serif;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.banner--mobile .subtitle {
+  font-size: 20px; 
+  font-weight: 500;
+  line-height: 26px; 
+  color: #FFFFFF;
+  font-family: 'TT Firs Neue', sans-serif;
+}
 
     /* =============================================
        ОБЩИЕ СТИЛИ
@@ -339,28 +343,19 @@
   </style>
 </head>
 <body>
-  <!-- Фоновое изображение для Mobile -->
-  <div class="banner-background" id="banner-background">
-    <img id="banner-background-image" src="" alt="Background">
-  </div>
-
   <div class="banner" id="banner">
     <div class="banner-left" id="banner-left">
       <!-- Логотип -->
       <div class="logo" id="logo">
-        <img src="/src/img/logo.svg" alt="Fun&Sun Logo">
+        <img id="logo-image" src="/src/img/candy_logo_red.svg" alt="Fun&Sun Logo">
       </div>
-
       <!-- Плашка -->
       <div class="badge" id="badge"></div>
-
       <!-- Заголовок -->
       <h1 class="title" id="title">Заголовок баннера</h1>
-
       <!-- Подзаголовок -->
       <p class="subtitle" id="subtitle">Подзаголовок</p>
     </div>
-
     <div class="banner-right" id="banner-right">
       <img id="banner-image" src="" alt="Banner image">
     </div>
@@ -373,6 +368,16 @@
       return value !== null ? value : defaultValue;
     }
 
+    // 📍 МАППИНГ ЦВЕТОВ К ЛОГОТИПАМ
+    const LOGO_MAP = {
+      '#FE4D00': 'yellow', '#FF8F09': 'yellow', '#F3202C': 'yellow', '#00BDAA': 'yellow',
+      '#FFEA2E': 'red',    '#9BCAFF': 'red',    '#6898F1': 'red',    '#89F4DF': 'red'
+    };
+    function getLogoVariant(bgColor) {
+      const cleanColor = bgColor.replace(/\s/g, '').toUpperCase();
+      return LOGO_MAP[cleanColor] || 'red';
+    }
+
     function applyParams() {
       const bannerType = getUrlParam('banner_type', 'email');
       const bgColor = getUrlParam('bg_color', '#FF6B00');
@@ -380,7 +385,6 @@
       const imageUrl = getUrlParam('image_url', '');
       const textColor = getUrlParam('text_color', '#FFFFFF');
       const subtitle = getUrlParam('subtitle', '');
-      const showLogo = getUrlParam('show_logo', 'false');
       const badgeText = getUrlParam('badge_text', '');
       const badgeColor = getUrlParam('badge_color', '#FFEA2E');
       const badgeTextColor = getUrlParam('badge_text_color', '#FE4D00');
@@ -407,36 +411,32 @@ if (bannerType === 'mobile') {
   document.getElementById('badge').style.backgroundColor = badgeColor;
 }
 
+      // Цвет текста
       document.getElementById('title').style.color = textColor;
       document.getElementById('subtitle').style.color = textColor;
       document.getElementById('badge').style.color = badgeTextColor;
 
+      // Контент
       document.getElementById('title').textContent = title;
-
       const subtitleEl = document.getElementById('subtitle');
       if (subtitle) {
         subtitleEl.textContent = subtitle;
-        subtitleEl.style.display = bannerType === 'mobile' ? 'flex' : 'block';
+        subtitleEl.style.display = (bannerType === 'mobile') ? 'flex' : 'block';
       } else {
         subtitleEl.style.display = 'none';
       }
 
-      // Применяем изображение
+      // Изображение
       const imageEl = document.getElementById('banner-image');
-      const bannerBgEl = document.getElementById('banner-background');
-      
       if (imageUrl) {
         imageEl.src = imageUrl;
         imageEl.style.display = 'block';
-        document.getElementById('banner-right').style.display = 'block';
-        bannerBgEl.style.display = 'none';
+        document.getElementById('banner-right').style.display = (bannerType === 'mobile') ? 'block' : 'flex';
       } else {
-        imageEl.style.display = 'none';
         document.getElementById('banner-right').style.display = 'none';
-        bannerBgEl.style.display = 'none';
       }
 
-      // Применяем плашку
+      // Плашка
       const badgeEl = document.getElementById('badge');
       if (badgeText) {
         badgeEl.textContent = badgeText;
@@ -445,9 +445,12 @@ if (bannerType === 'mobile') {
         badgeEl.style.display = 'none';
       }
 
-      // Применяем логотип (для web)
+      // 📍 Логотип (ТОЛЬКО mobile)
       const logoEl = document.getElementById('logo');
-      if (bannerType === 'web' && showLogo === 'true') {
+      const logoImg = document.getElementById('logo-image');
+      if (bannerType === 'mobile') {
+        const variant = getLogoVariant(bgColor);
+        logoImg.src = `/src/img/candy_logo_${variant}.svg`;
         logoEl.style.display = 'block';
       } else {
         logoEl.style.display = 'none';
