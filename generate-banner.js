@@ -36,8 +36,8 @@ async function generateBanner(bannerUrl, outputPath, bannerType = 'email') {
         break;
       case 'email':
       default:
-        viewportWidth = 1160;
-        viewportHeight = 712;
+        viewportWidth = 580;
+        viewportHeight = 356;
     }
     
     await page.setViewport({ 
