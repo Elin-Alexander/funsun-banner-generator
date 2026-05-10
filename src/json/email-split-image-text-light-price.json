@@ -1,0 +1,9 @@
+{
+  "bg_color": "#C2E6FA",
+  "text_color": "#3A3D44",
+  "title": "ЛУЧШАЯ ЦЕНА МЕСЯЦА",
+  "subtitle": "Спецпредложения на пляжные отели",
+  "image_url": "/src/img/04.jpg",
+  "banner_type": "email",
+  "layout_type": "split_image_text"
+}

@@ -164,19 +164,38 @@ curl -X POST http://localhost:3000/api/generate-banner ^
 
 ## Тестовые JSON
 
-В папке `src/json/` лежат примеры payload для разных layout.
+В папке `src/json/` лежат примеры payload для разных layout. Для каждого email-layout есть два JSON с разными текстами, изображениями и парой `bg_color` / `text_color`. Также есть по два примера для `web` и `mobile`.
 
-Основные email-примеры:
+Email-примеры:
 
-- `test-email.json`
-- `test-email-top-image.json`
-- `test-email-split-image-text.json`
-- `test-email-two-images-equal.json`
-- `test-email-two-images-left-wide.json`
-- `test-email-two-images-right-wide.json`
-- `test-email-three-images-mixed.json`
-- `test-email-three-images-equal.json`
-- `test-email-side-text-three-images.json`
+- `email-default-blue-family.json`
+- `email-default-dark-premium.json`
+- `email-top-image-green-weekend.json`
+- `email-top-image-magenta-summer.json`
+- `email-split-image-text-light-price.json`
+- `email-split-image-text-orange-sale.json`
+- `email-two-images-equal-red-hot-tour.json`
+- `email-two-images-equal-purple-weekend.json`
+- `email-two-images-left-wide-blue-resort.json`
+- `email-two-images-left-wide-dark-sea.json`
+- `email-two-images-right-wide-light-family.json`
+- `email-two-images-right-wide-orange-beach.json`
+- `email-three-images-mixed-green-islands.json`
+- `email-three-images-mixed-magenta-choice.json`
+- `email-three-images-equal-blue-last-minute.json`
+- `email-three-images-equal-red-vacation.json`
+- `email-side-text-three-images-dark-long-title.json`
+- `email-side-text-three-images-purple-resorts.json`
+
+Web-примеры:
+
+- `web-push-dark-premium.json`
+- `web-push-orange-sale.json`
+
+Mobile-примеры:
+
+- `mobile-push-blue-tours.json`
+- `mobile-push-light-family.json`
 
 ## Важные детали
 

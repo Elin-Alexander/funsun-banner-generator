@@ -1,0 +1,14 @@
+{
+  "bg_color": "#5E113F",
+  "text_color": "#FFFFFF",
+  "title": "ЛУЧШИЕ КУРОРТЫ СЕЗОНА",
+  "subtitle": "Три фото в правой колонке",
+  "image_url": "/src/img/02.jpg",
+  "image_url_2": "/src/img/03.jpg",
+  "image_url_3": "/src/img/05.jpg",
+  "banner_type": "email",
+  "layout_type": "side_text_three_images",
+  "badge_text": "SEASON",
+  "badge_color": "#EAD9BB",
+  "badge_text_color": "#5E113F"
+}

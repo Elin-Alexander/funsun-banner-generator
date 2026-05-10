@@ -1,0 +1,12 @@
+{
+  "bg_color": "#AECC53",
+  "text_color": "#FFFFFF",
+  "title": "ВЫХОДНЫЕ У МОРЯ",
+  "subtitle": "Короткие туры на ближайшие даты",
+  "image_url": "/src/img/02.jpg",
+  "banner_type": "email",
+  "layout_type": "top_image",
+  "badge_text": "WEEKEND",
+  "badge_color": "#FFFFFF",
+  "badge_text_color": "#3A3D44"
+}

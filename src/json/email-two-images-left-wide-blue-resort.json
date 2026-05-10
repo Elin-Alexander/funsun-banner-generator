@@ -1,0 +1,13 @@
+{
+  "bg_color": "#0071CD",
+  "text_color": "#FFFFFF",
+  "title": "КУРОРТЫ ДЛЯ ЛЕТА",
+  "subtitle": "Большое фото слева",
+  "image_url": "/src/img/05.jpg",
+  "image_url_2": "/src/img/02.jpg",
+  "banner_type": "email",
+  "layout_type": "two_images_left_wide",
+  "badge_text": "RESORT",
+  "badge_color": "#AFC3F7",
+  "badge_text_color": "#FFFFFF"
+}

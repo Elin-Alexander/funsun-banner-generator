@@ -1,0 +1,12 @@
+{
+  "bg_color": "#FF00FF",
+  "text_color": "#FFFFFF",
+  "title": "ЛЕТО НАЧИНАЕТСЯ",
+  "subtitle": "Пляжи, солнце и теплое море",
+  "image_url": "/src/img/03.jpg",
+  "banner_type": "email",
+  "layout_type": "top_image",
+  "badge_text": "ЛЕТО",
+  "badge_color": "#FFFFFF",
+  "badge_text_color": "#FF00FF"
+}

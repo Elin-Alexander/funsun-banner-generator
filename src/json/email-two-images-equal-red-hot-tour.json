@@ -1,0 +1,13 @@
+{
+  "bg_color": "#E20303",
+  "text_color": "#FFFFFF",
+  "title": "ГОРЯЩИЕ ТУРЫ СЕГОДНЯ",
+  "subtitle": "Вылеты уже на этой неделе",
+  "image_url": "/src/img/01.jpg",
+  "image_url_2": "/src/img/04.jpg",
+  "banner_type": "email",
+  "layout_type": "two_images_equal",
+  "badge_text": "HOT",
+  "badge_color": "#FFFFFF",
+  "badge_text_color": "#E20303"
+}

@@ -1,0 +1,9 @@
+{
+  "bg_color": "#E99C12",
+  "text_color": "#FFFFFF",
+  "title": "СКИДКИ ДО КОНЦА НЕДЕЛИ",
+  "subtitle": "Успейте выбрать выгодный тур",
+  "image_url": "/src/img/05.jpg",
+  "banner_type": "email",
+  "layout_type": "split_image_text"
+}

@@ -1,0 +1,14 @@
+{
+  "bg_color": "#383838",
+  "text_color": "#EAD9BB",
+  "title": "ЗАГОЛОВОК МАКСИМУМ 3 СТРОКИ",
+  "subtitle": "Подзаголовок максимум 3 строки",
+  "image_url": "/src/img/01.jpg",
+  "image_url_2": "/src/img/05.jpg",
+  "image_url_3": "/src/img/04.jpg",
+  "banner_type": "email",
+  "layout_type": "side_text_three_images",
+  "badge_text": "LONG",
+  "badge_color": "#EAD9BB",
+  "badge_text_color": "#383838"
+}

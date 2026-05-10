@@ -1,0 +1,14 @@
+{
+  "bg_color": "#AECC53",
+  "text_color": "#FFFFFF",
+  "title": "ТРИ ИДЕИ ДЛЯ ОТПУСКА",
+  "subtitle": "Разные форматы отдыха",
+  "image_url": "/src/img/01.jpg",
+  "image_url_2": "/src/img/05.jpg",
+  "image_url_3": "/src/img/03.jpg",
+  "banner_type": "email",
+  "layout_type": "three_images_mixed",
+  "badge_text": "ТОП-3",
+  "badge_color": "#FFFFFF",
+  "badge_text_color": "#3A3D44"
+}

@@ -70,7 +70,8 @@
     }
 
     .banner--email .banner-left {
-      width: 43%;
+      width: 249px;
+      flex: 0 0 249px;
       padding-left: 14px;
       padding-top: 55px;
       display: flex;
@@ -79,11 +80,12 @@
     }
 
     .banner--email .banner-right {
-      width: 63%;
-      padding: 14px 0px 14px 14px;
+      width: 331px;
+      flex: 0 0 331px;
+      padding: 14px 14px 14px 0;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .banner--email .banner-right img {
@@ -120,13 +122,16 @@
     }
 
     .banner--email .title {
+      width: 221px;
       font-size: 30px;
       font-weight: 700;
       line-height: 1.1;
       margin-bottom: 15px;
       color: #FFFFFF;
       font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
-	  text-transform: uppercase;
+      text-transform: uppercase;
+      white-space: normal;
+      overflow-wrap: normal;
     }
 
     .banner--email .subtitle {
@@ -512,18 +517,20 @@
       font-size: 30px;
       line-height: 33px;
       white-space: normal;
+      overflow-wrap: normal;
     }
 
     .banner--email-side_text_three_images .subtitle {
       position: absolute;
       top: 158px;
       left: 0;
-      width: 266px;
-      height: 74px;
+      width: 221px;
+      height: 78px;
       overflow: hidden;
       font-size: 20px;
-      line-height: 22px;
+      line-height: 20px;
       white-space: normal;
+      overflow-wrap: normal;
     }
 
     /* =============================================
@@ -772,9 +779,13 @@
       element.style.fontSize = `${maxFontSize}px`;
 
       let size = maxFontSize;
+      const overflowTolerance = 3;
       while (
         size > minFontSize &&
-        (element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth)
+        (
+          element.scrollHeight > element.clientHeight + overflowTolerance ||
+          element.scrollWidth > element.clientWidth + overflowTolerance
+        )
       ) {
         size -= 1;
         element.style.fontSize = `${size}px`;
@@ -899,6 +910,10 @@
         logoEl.style.display = 'none';
       }
 
+      if (bannerType === 'email' && layoutType === 'default') {
+        fitTextToBox(titleEl, 30, 20);
+      }
+
       if (isThreeImagesLayout) {
         fitTextToBox(titleEl, 30, 20);
         if (subtitleEl.style.display !== 'none') {
@@ -907,7 +922,12 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', applyParams);
+    document.addEventListener('DOMContentLoaded', () => {
+      applyParams();
+      if (document.fonts) {
+        document.fonts.ready.then(applyParams);
+      }
+    });
   </script>
 </body>
 </html>

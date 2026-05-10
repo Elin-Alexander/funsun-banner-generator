@@ -1,0 +1,13 @@
+{
+  "bg_color": "#E99C12",
+  "text_color": "#FFFFFF",
+  "title": "ПЛЯЖИ БЛИЖЕ, ЧЕМ КАЖЕТСЯ",
+  "subtitle": "Подборка направлений сезона",
+  "image_url": "/src/img/04.jpg",
+  "image_url_2": "/src/img/01.jpg",
+  "banner_type": "email",
+  "layout_type": "two_images_right_wide",
+  "badge_text": "BEACH",
+  "badge_color": "#FFFFFF",
+  "badge_text_color": "#E99C12"
+}

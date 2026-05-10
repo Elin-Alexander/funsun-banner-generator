@@ -1,0 +1,13 @@
+{
+  "bg_color": "#383838",
+  "text_color": "#EAD9BB",
+  "title": "ТИХИЙ ОТДЫХ У ВОДЫ",
+  "subtitle": "Спокойные отели и мягкий сервис",
+  "image_url": "/src/img/03.jpg",
+  "image_url_2": "/src/img/01.jpg",
+  "banner_type": "email",
+  "layout_type": "two_images_left_wide",
+  "badge_text": "RELAX",
+  "badge_color": "#EAD9BB",
+  "badge_text_color": "#383838"
+}

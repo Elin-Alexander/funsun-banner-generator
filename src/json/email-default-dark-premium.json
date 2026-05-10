@@ -1,0 +1,12 @@
+{
+  "bg_color": "#383838",
+  "text_color": "#EAD9BB",
+  "title": "ПРЕМИАЛЬНЫЙ ОТДЫХ",
+  "subtitle": "Лучшие отели для двоих",
+  "image_url": "/src/img/05.jpg",
+  "banner_type": "email",
+  "layout_type": "default",
+  "badge_text": "PREMIUM",
+  "badge_color": "#EAD9BB",
+  "badge_text_color": "#383838"
+}

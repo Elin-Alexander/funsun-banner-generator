@@ -1,0 +1,13 @@
+{
+  "bg_color": "#5E113F",
+  "text_color": "#FFFFFF",
+  "title": "МИНИ-КАНИКУЛЫ У МОРЯ",
+  "subtitle": "Два отеля для быстрого выбора",
+  "image_url": "/src/img/02.jpg",
+  "image_url_2": "/src/img/03.jpg",
+  "banner_type": "email",
+  "layout_type": "two_images_equal",
+  "badge_text": "ВЫБОР",
+  "badge_color": "#EAD9BB",
+  "badge_text_color": "#5E113F"
+}

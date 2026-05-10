@@ -1,8 +1,0 @@
-{
-  "bg_color": "#0075C9",
-  "text_color": "#FFFFFF",
-  "title": "ЛУЧШАЯ ЦЕНА МЕСЯЦА",
-  "image_url": "http://localhost:3000/src/img/02.jpg",
-  "banner_type": "email",
-  "layout_type": "split_image_text"
-}

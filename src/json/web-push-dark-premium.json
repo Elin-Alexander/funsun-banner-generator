@@ -1,0 +1,12 @@
+{
+  "bg_color": "#383838",
+  "text_color": "#EAD9BB",
+  "title": "ПРЕМИАЛЬНЫЙ ОТДЫХ У МОРЯ",
+  "subtitle": "Отели с высоким рейтингом",
+  "image_url": "/src/img/05.jpg",
+  "banner_type": "web",
+  "layout_type": "default",
+  "badge_text": "WEB",
+  "badge_color": "#EAD9BB",
+  "badge_text_color": "#383838"
+}

@@ -1,0 +1,12 @@
+{
+  "bg_color": "#0071CD",
+  "text_color": "#FFFFFF",
+  "title": "ТУРЫ НА ЛЕТО УЖЕ В ПРОДАЖЕ",
+  "subtitle": "Выбирайте даты и отель",
+  "image_url": "/src/img/04.jpg",
+  "banner_type": "mobile",
+  "layout_type": "default",
+  "badge_text": "MOBILE",
+  "badge_color": "#AFC3F7",
+  "badge_text_color": "#FFFFFF"
+}

@@ -1,0 +1,14 @@
+{
+  "bg_color": "#FF00FF",
+  "text_color": "#FFFFFF",
+  "title": "ВЫБЕРИТЕ СВОЙ ОТЕЛЬ",
+  "subtitle": "Три фото для сравнения",
+  "image_url": "/src/img/04.jpg",
+  "image_url_2": "/src/img/02.jpg",
+  "image_url_3": "/src/img/05.jpg",
+  "banner_type": "email",
+  "layout_type": "three_images_mixed",
+  "badge_text": "CHOICE",
+  "badge_color": "#FFFFFF",
+  "badge_text_color": "#FF00FF"
+}
