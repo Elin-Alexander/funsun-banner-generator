@@ -53,11 +53,16 @@ async function generateBanner(bannerUrl, outputPath, bannerType = 'email') {
     
     await page.waitForSelector('.banner', { timeout: 10000 });
     await page.evaluateHandle('document.fonts.ready');
+    await page.evaluate(() => {
+      document.documentElement.style.background = 'transparent';
+      document.body.style.background = 'transparent';
+    });
     
     const bannerElement = await page.$('.banner');
     await bannerElement.screenshot({ 
       path: outputPath, 
-      type: 'png'
+      type: 'png',
+      omitBackground: true
     });
     
     console.log(`✅ Скриншот сохранён: ${outputPath}`);

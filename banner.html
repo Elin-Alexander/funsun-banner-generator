@@ -54,8 +54,13 @@
       position: relative;
     }
 
+    .banner-image-secondary,
+    .banner-image-tertiary {
+      display: none;
+    }
+
     /* =============================================
-       EMAIL (580×356px) - ВАША ВЁРСТКА
+       EMAIL DEFAULT (580×356px) - ВАША ВЁРСТКА
        ============================================= */
     .banner--email {
       width: 580px;
@@ -131,6 +136,394 @@
       font-weight: 500;
       font-family: 'TT Firs Neue', 'Arial', 'Helvetica', sans-serif;
       width: 81%;
+    }
+
+    /* =============================================
+       EMAIL TOP IMAGE (580×356px)
+       ============================================= */
+    .banner--email-top_image {
+      flex-direction: column;
+      padding: 13px 12px 12px;
+      border-radius: 12px;
+    }
+
+    .banner--email-top_image .banner-left {
+      width: 100%;
+      height: 110px;
+      padding: 0;
+      display: block;
+      position: relative;
+    }
+
+    .banner--email-top_image .banner-right {
+      width: 100%;
+      height: 209px;
+      padding: 0;
+      margin-top: 12px;
+      display: block;
+    }
+
+    .banner--email-top_image .banner-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .banner--email-top_image .badge {
+      top: 0;
+      left: 0;
+      height: 25px;
+      padding: 4px 18px;
+      border-radius: 13px;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+    }
+
+    .banner--email-top_image .title {
+      position: absolute;
+      top: 51px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    .banner--email-top_image .subtitle {
+      position: absolute;
+      top: 88px;
+      left: 0;
+      width: 100%;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    /* =============================================
+       EMAIL SPLIT IMAGE TEXT (580×356px)
+       ============================================= */
+    .banner--email-split_image_text {
+      flex-direction: column;
+      gap: 7px;
+      padding: 8px 7px 7px;
+      border-radius: 0;
+      background-color: transparent !important;
+    }
+
+    .banner--email-split_image_text .banner-right {
+      order: 0;
+      width: 566px;
+      height: 204px;
+      padding: 0;
+      display: block;
+    }
+
+    .banner--email-split_image_text .banner-right img {
+      width: 566px;
+      height: 204px;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    .banner--email-split_image_text .banner-left {
+      order: 1;
+      width: 566px;
+      height: 130px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-radius: 18px;
+    }
+
+    .banner--email-split_image_text .title {
+      position: static;
+      width: 520px;
+      margin: 0 25px 0 21px;
+      transform: translateY(11px);
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 122%;
+      letter-spacing: 0;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .banner--email-split_image_text .badge,
+    .banner--email-split_image_text .subtitle,
+    .banner--email-split_image_text .logo {
+      display: none !important;
+    }
+
+    /* =============================================
+       EMAIL TWO IMAGES (580×356px)
+       ============================================= */
+    .banner--email-two_images_equal,
+    .banner--email-two_images_left_wide,
+    .banner--email-two_images_right_wide {
+      flex-direction: column;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 14px;
+    }
+
+    .banner--email-two_images_equal .banner-left,
+    .banner--email-two_images_left_wide .banner-left,
+    .banner--email-two_images_right_wide .banner-left {
+      width: 552px;
+      height: 109px;
+      padding: 0;
+      display: block;
+      position: relative;
+    }
+
+    .banner--email-two_images_equal .banner-right,
+    .banner--email-two_images_left_wide .banner-right,
+    .banner--email-two_images_right_wide .banner-right {
+      width: 552px;
+      height: 207px;
+      padding: 0;
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    .banner--email-two_images_equal .banner-right img,
+    .banner--email-two_images_left_wide .banner-right img,
+    .banner--email-two_images_right_wide .banner-right img {
+      height: 207px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .banner--email-two_images_equal .banner-right .banner-image-primary,
+    .banner--email-two_images_equal .banner-right .banner-image-secondary {
+      width: 270px;
+    }
+
+    .banner--email-two_images_left_wide .banner-right .banner-image-primary,
+    .banner--email-two_images_right_wide .banner-right .banner-image-secondary {
+      width: 324px;
+    }
+
+    .banner--email-two_images_left_wide .banner-right .banner-image-secondary,
+    .banner--email-two_images_right_wide .banner-right .banner-image-primary {
+      width: 216px;
+    }
+
+    .banner--email-two_images_equal .badge,
+    .banner--email-two_images_left_wide .badge,
+    .banner--email-two_images_right_wide .badge {
+      top: 0;
+      left: 0;
+      height: 25px;
+      padding: 4px 18px;
+      border-radius: 13px;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+    }
+
+    .banner--email-two_images_equal .title,
+    .banner--email-two_images_left_wide .title,
+    .banner--email-two_images_right_wide .title {
+      position: absolute;
+      top: 51px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      font-size: 30px;
+      line-height: 33px;
+      white-space: nowrap;
+    }
+
+    .banner--email-two_images_equal .subtitle,
+    .banner--email-two_images_left_wide .subtitle,
+    .banner--email-two_images_right_wide .subtitle {
+      position: absolute;
+      top: 88px;
+      left: 0;
+      width: 100%;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    /* =============================================
+       EMAIL THREE IMAGES (580×356px)
+       ============================================= */
+    .banner--email-three_images_mixed,
+    .banner--email-three_images_equal,
+    .banner--email-side_text_three_images {
+      display: block;
+      border-radius: 14px;
+    }
+
+    .banner--email-three_images_mixed .banner-left,
+    .banner--email-three_images_equal .banner-left {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 552px;
+      height: 109px;
+      padding: 0;
+      display: block;
+    }
+
+    .banner--email-three_images_mixed .banner-right,
+    .banner--email-three_images_equal .banner-right {
+      position: absolute;
+      left: 14px;
+      padding: 0;
+      display: flex;
+      gap: 7px;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    .banner--email-three_images_mixed .banner-right {
+      top: 130px;
+      width: 552px;
+      height: 212px;
+    }
+
+    .banner--email-three_images_equal .banner-right {
+      top: 132px;
+      width: 552px;
+      height: 210px;
+    }
+
+    .banner--email-three_images_mixed .banner-right img,
+    .banner--email-three_images_equal .banner-right img,
+    .banner--email-side_text_three_images .banner-right img {
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .banner--email-three_images_mixed .banner-right img {
+      height: 212px;
+    }
+
+    .banner--email-three_images_mixed .banner-right .banner-image-primary {
+      width: 221px;
+    }
+
+    .banner--email-three_images_mixed .banner-right .banner-image-secondary {
+      width: 172px;
+    }
+
+    .banner--email-three_images_mixed .banner-right .banner-image-tertiary {
+      width: 145px;
+    }
+
+    .banner--email-three_images_equal .banner-right img {
+      width: 179.33px;
+      height: 210px;
+    }
+
+    .banner--email-three_images_mixed .badge,
+    .banner--email-three_images_equal .badge {
+      top: 0;
+      left: 0;
+      height: 25px;
+      padding: 4px 18px;
+      border-radius: 13px;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+    }
+
+    .banner--email-three_images_mixed .title,
+    .banner--email-three_images_equal .title {
+      position: absolute;
+      top: 49px;
+      left: 0;
+      width: 552px;
+      height: 36px;
+      margin: 0;
+      overflow: hidden;
+      font-size: 30px;
+      line-height: 33px;
+      white-space: normal;
+    }
+
+    .banner--email-three_images_mixed .subtitle,
+    .banner--email-three_images_equal .subtitle {
+      position: absolute;
+      top: 86px;
+      left: 0;
+      width: 552px;
+      height: 24px;
+      overflow: hidden;
+      font-size: 20px;
+      line-height: 22px;
+      white-space: normal;
+    }
+
+    .banner--email-side_text_three_images .banner-left {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 266px;
+      height: 328px;
+      padding: 0;
+      display: block;
+    }
+
+    .banner--email-side_text_three_images .banner-right {
+      position: absolute;
+      top: 14px;
+      left: 290px;
+      width: 276px;
+      height: 328px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    .banner--email-side_text_three_images .banner-right img {
+      width: 276px;
+      height: 105px;
+    }
+
+    .banner--email-side_text_three_images .badge {
+      top: 0;
+      left: 0;
+      height: 25px;
+      padding: 4px 18px;
+      border-radius: 13px;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+    }
+
+    .banner--email-side_text_three_images .title {
+      position: absolute;
+      top: 49px;
+      left: 0;
+      width: 266px;
+      height: 100px;
+      margin: 0;
+      overflow: hidden;
+      font-size: 30px;
+      line-height: 33px;
+      white-space: normal;
+    }
+
+    .banner--email-side_text_three_images .subtitle {
+      position: absolute;
+      top: 158px;
+      left: 0;
+      width: 266px;
+      height: 74px;
+      overflow: hidden;
+      font-size: 20px;
+      line-height: 22px;
+      white-space: normal;
     }
 
     /* =============================================
@@ -357,7 +750,9 @@
       <p class="subtitle" id="subtitle">Подзаголовок</p>
     </div>
     <div class="banner-right" id="banner-right">
-      <img id="banner-image" src="" alt="Banner image">
+      <img id="banner-image" class="banner-image-primary" src="" alt="Banner image">
+      <img id="banner-image-secondary" class="banner-image-secondary" src="" alt="Banner image secondary">
+      <img id="banner-image-tertiary" class="banner-image-tertiary" src="" alt="Banner image tertiary">
     </div>
   </div>
 
@@ -367,6 +762,27 @@
       const value = params.get(param);
       return value !== null ? value : defaultValue;
     }
+
+    function normalizeLayoutType(layoutType) {
+      const normalized = (layoutType || '').trim();
+      return /^[a-z0-9_-]+$/i.test(normalized) ? normalized : 'default';
+    }
+
+    function fitTextToBox(element, maxFontSize, minFontSize) {
+      element.style.fontSize = `${maxFontSize}px`;
+
+      let size = maxFontSize;
+      while (
+        size > minFontSize &&
+        (element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth)
+      ) {
+        size -= 1;
+        element.style.fontSize = `${size}px`;
+      }
+    }
+
+    const TWO_IMAGE_LAYOUTS = ['two_images_equal', 'two_images_left_wide', 'two_images_right_wide'];
+    const THREE_IMAGE_LAYOUTS = ['three_images_mixed', 'three_images_equal', 'side_text_three_images'];
 
     // 📍 МАППИНГ ЦВЕТОВ К ЛОГОТИПАМ
     const LOGO_MAP = {
@@ -378,11 +794,27 @@
       return LOGO_MAP[cleanColor] || 'red';
     }
 
+    function showImage(imageElement, src) {
+      imageElement.src = src;
+      imageElement.style.display = 'block';
+    }
+
+    function hideImage(imageElement) {
+      imageElement.removeAttribute('src');
+      imageElement.style.display = 'none';
+    }
+
     function applyParams() {
       const bannerType = getUrlParam('banner_type', 'email');
+      const layoutType = normalizeLayoutType(getUrlParam('layout_type', 'default'));
+      const isSplitImageTextLayout = bannerType === 'email' && layoutType === 'split_image_text';
+      const isTwoImagesLayout = bannerType === 'email' && TWO_IMAGE_LAYOUTS.includes(layoutType);
+      const isThreeImagesLayout = bannerType === 'email' && THREE_IMAGE_LAYOUTS.includes(layoutType);
       const bgColor = getUrlParam('bg_color', '#FF6B00');
       const title = getUrlParam('title', 'Заголовок баннера');
       const imageUrl = getUrlParam('image_url', '');
+      const imageUrlSecondary = getUrlParam('image_url_2', imageUrl) || imageUrl;
+      const imageUrlTertiary = getUrlParam('image_url_3', imageUrl) || imageUrl;
       const textColor = getUrlParam('text_color', '#FFFFFF');
       const subtitle = getUrlParam('subtitle', '');
       const badgeText = getUrlParam('badge_text', '');
@@ -390,36 +822,39 @@
       const badgeTextColor = getUrlParam('badge_text_color', '#FE4D00');
 
       const bannerEl = document.getElementById('banner');
+      const bannerLeftEl = document.getElementById('banner-left');
+      const bannerRightEl = document.getElementById('banner-right');
+      const badgeEl = document.getElementById('badge');
+      const titleEl = document.getElementById('title');
+      const subtitleEl = document.getElementById('subtitle');
+      const imageEl = document.getElementById('banner-image');
+      const imageSecondaryEl = document.getElementById('banner-image-secondary');
+      const imageTertiaryEl = document.getElementById('banner-image-tertiary');
+      const logoEl = document.getElementById('logo');
+      const logoImg = document.getElementById('logo-image');
+
       bannerEl.className = 'banner';
       bannerEl.classList.add(`banner--${bannerType}`);
+      bannerEl.classList.add(`banner--${bannerType}-${layoutType}`);
 
       // Применяем цвет фона
-if (bannerType === 'mobile') {
-  // Для mobile цвет фона применяется ко всему баннеру + текстовому блоку
-  bannerEl.style.backgroundColor = bgColor;
-  document.getElementById('banner-left').style.backgroundColor = bgColor;
-  document.getElementById('badge').style.backgroundColor = badgeColor;
-} else if (bannerType === 'web') {
-  // Для web цвет фона применяется к текстовому блоку
-  bannerEl.style.backgroundColor = bgColor;
-  document.getElementById('banner-left').style.backgroundColor = bgColor;
-  document.getElementById('badge').style.backgroundColor = badgeColor;
-} else {
-  // Для email цвет фона применяется ко всему баннеру
-  bannerEl.style.backgroundColor = bgColor;
-  document.getElementById('banner-left').style.backgroundColor = bgColor;
-  document.getElementById('badge').style.backgroundColor = badgeColor;
-}
+      if (isSplitImageTextLayout) {
+        // Для этого email-layout фон баннера прозрачный, цвет применяется только к нижней плашке
+        bannerEl.style.backgroundColor = 'transparent';
+      } else {
+        bannerEl.style.backgroundColor = bgColor;
+      }
+      bannerLeftEl.style.backgroundColor = bgColor;
+      badgeEl.style.backgroundColor = badgeColor;
 
       // Цвет текста
-      document.getElementById('title').style.color = textColor;
-      document.getElementById('subtitle').style.color = textColor;
-      document.getElementById('badge').style.color = badgeTextColor;
+      titleEl.style.color = textColor;
+      subtitleEl.style.color = textColor;
+      badgeEl.style.color = badgeTextColor;
 
       // Контент
-      document.getElementById('title').textContent = title;
-      const subtitleEl = document.getElementById('subtitle');
-      if (subtitle) {
+      titleEl.textContent = title;
+      if (subtitle && !isSplitImageTextLayout) {
         subtitleEl.textContent = subtitle;
         subtitleEl.style.display = (bannerType === 'mobile') ? 'flex' : 'block';
       } else {
@@ -427,18 +862,28 @@ if (bannerType === 'mobile') {
       }
 
       // Изображение
-      const imageEl = document.getElementById('banner-image');
       if (imageUrl) {
-        imageEl.src = imageUrl;
-        imageEl.style.display = 'block';
-        document.getElementById('banner-right').style.display = (bannerType === 'mobile') ? 'block' : 'flex';
+        showImage(imageEl, imageUrl);
+        if (isTwoImagesLayout || isThreeImagesLayout) {
+          showImage(imageSecondaryEl, imageUrlSecondary);
+        } else {
+          hideImage(imageSecondaryEl);
+        }
+        if (isThreeImagesLayout) {
+          showImage(imageTertiaryEl, imageUrlTertiary);
+        } else {
+          hideImage(imageTertiaryEl);
+        }
+        bannerRightEl.style.display = (bannerType === 'mobile' || isSplitImageTextLayout) ? 'block' : 'flex';
       } else {
-        document.getElementById('banner-right').style.display = 'none';
+        hideImage(imageEl);
+        hideImage(imageSecondaryEl);
+        hideImage(imageTertiaryEl);
+        bannerRightEl.style.display = 'none';
       }
 
       // Плашка
-      const badgeEl = document.getElementById('badge');
-      if (badgeText) {
+      if (badgeText && !isSplitImageTextLayout) {
         badgeEl.textContent = badgeText;
         badgeEl.style.display = 'block';
       } else {
@@ -446,14 +891,19 @@ if (bannerType === 'mobile') {
       }
 
       // 📍 Логотип (ТОЛЬКО mobile)
-      const logoEl = document.getElementById('logo');
-      const logoImg = document.getElementById('logo-image');
       if (bannerType === 'mobile') {
         const variant = getLogoVariant(bgColor);
         logoImg.src = `/src/img/candy_logo_${variant}.svg`;
         logoEl.style.display = 'block';
       } else {
         logoEl.style.display = 'none';
+      }
+
+      if (isThreeImagesLayout) {
+        fitTextToBox(titleEl, 30, 20);
+        if (subtitleEl.style.display !== 'none') {
+          fitTextToBox(subtitleEl, 20, 14);
+        }
       }
     }
 

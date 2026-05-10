@@ -4,6 +4,16 @@ const { generateBanner } = require('./generate-banner');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const VALID_BANNER_TYPES = ['email', 'web', 'mobile'];
+
+function normalizeLayoutType(layoutType) {
+  if (typeof layoutType !== 'string') {
+    return 'default';
+  }
+
+  const normalized = layoutType.trim();
+  return /^[a-z0-9_-]+$/i.test(normalized) ? normalized : 'default';
+}
 
 // Middleware
 app.use(express.json());
@@ -25,8 +35,11 @@ app.post('/api/generate-banner', async (req, res) => {
       text_color, 
       title, 
       image_url, 
+      image_url_2,
+      image_url_3,
       subtitle, 
       banner_type,
+      layout_type,
       show_logo,
       badge_text, 
       badge_color, 
@@ -42,8 +55,8 @@ app.post('/api/generate-banner', async (req, res) => {
     }
 
     // 📍 Тип баннера (по умолчанию email)
-    const validTypes = ['email', 'web', 'mobile'];
-    const bannerType = validTypes.includes(banner_type) ? banner_type : 'email';
+    const bannerType = VALID_BANNER_TYPES.includes(banner_type) ? banner_type : 'email';
+    const layoutType = normalizeLayoutType(layout_type);
 
     // Формируем параметры для URL
     const params = {
@@ -51,11 +64,14 @@ app.post('/api/generate-banner', async (req, res) => {
       text_color: text_color || '#FFFFFF',
       title: title,
       image_url: image_url,
-      banner_type: bannerType
+      banner_type: bannerType,
+      layout_type: layoutType
     };
 
     // Опциональные параметры
     if (subtitle) params.subtitle = subtitle;
+    if (image_url_2) params.image_url_2 = image_url_2;
+    if (image_url_3) params.image_url_3 = image_url_3;
     if (show_logo) params.show_logo = show_logo;
     if (badge_text) {
       params.badge_text = badge_text;
@@ -69,6 +85,7 @@ app.post('/api/generate-banner', async (req, res) => {
 
     console.log('🔗 URL баннера:', bannerUrl);
     console.log('📐 Тип баннера:', bannerType);
+    console.log('🧩 Вариант вёрстки:', layoutType);
 
     // Генерируем имя файла
     const timestamp = Date.now();
@@ -89,7 +106,8 @@ app.post('/api/generate-banner', async (req, res) => {
         imageUrl: `${process.env.BASE_URL || `http://localhost:${PORT}`}/output/${outputFileName}`,
         bannerUrl: bannerUrl,
         params: params,
-        bannerType: bannerType
+        bannerType: bannerType,
+        layoutType: layoutType
       }
     });
 

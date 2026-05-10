@@ -5,6 +5,7 @@
   "subtitle": "Подзаголовок максимум 3 строки",
   "image_url": "http://localhost:3000/src/img/01.jpg",
   "banner_type": "email",
+  "layout_type": "",
   "badge_text": "EMAIL для тега",
   "badge_color": "#FFEA2E",
   "badge_text_color": "#FE4D00"
